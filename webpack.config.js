@@ -5,12 +5,12 @@ var precss = require('precss');
 var functions = require('postcss-functions');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-// var postCssLoader = [
-//   'sass-loader?module',
-//   '&localIdentName=[name]__[local]___[hash:base64:5]',
-//   '&disableStructuralMinification',
-//   '!postcss-loader'
-// ];
+var postCssLoader = [
+  'style-loader?module',
+  '&localIdentName=[name]__[local]___[hash:base64:5]',
+  '&disableStructuralMinification',
+  '!postcss-loader'
+];
 
 var plugins = [
     new webpack.NoErrorsPlugin(),
@@ -45,6 +45,7 @@ var config  = {
   module: {
     loaders: [
       {test: /\.scss/, loader: ExtractTextPlugin.extract("style", "css!sass")},
+      // {test: /\.css/, loader: ExtractTextPlugin.extract('style-loader', postCssLoader.join(''))},
       {test: /\.(png|gif)$/, loader: 'url-loader?name=[name]@[hash].[ext]&limit=5000'},
       {test: /\.svg$/, loader: 'url-loader?name=[name]@[hash].[ext]&limit=5000!svgo-loader?useConfig=svgo1'},
       {test: /\.(pdf|ico|jpg|eot|otf|woff|woff2|ttf|mp4|webm)$/, loader: 'file-loader?name=[name]@[hash].[ext]'},

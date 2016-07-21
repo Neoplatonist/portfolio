@@ -37,7 +37,7 @@ export default class Homepage extends Component {
           ]} />
 
           {/* Dropdown Structure */}
-          {/*<ul id="dropdown1" className="dropdown-content">
+          <ul id="dropdown1" className="dropdown-content">
             <li><a href="#">one</a></li>
             <li><a href="#">two</a></li>
             <li className="divider"></li>
@@ -49,23 +49,23 @@ export default class Homepage extends Component {
                 <a href="#" className="brand-logo">Logo</a>
                 <ul className="right hide-on-med-and-down">
                   <li><a href="sass.html">Sass</a></li>
-                  <li><a href="badges.html">Components</a></li>*/}
+                  <li><a href="badges.html">Components</a></li>
                   {/* Dropdown Trigger */}
-                  {/*<li><a className="dropdown-button" href="#" data-activates="dropdown1" onClick={this.menuDrop}>Dropdown<i className="material-icons right">arrow_drop_down</i></a></li>
+                  <li><a className="dropdown-button" href="#" data-activates="dropdown1" onClick={this.menuDrop}>Dropdown<i className="material-icons right">arrow_drop_down</i></a></li>
               </ul>
               </div>
             </div>
-          </nav>*/}
+          </nav>
 
-        {/*<h1 className={example}>
+        <h1>
           Hot Reloadable <br />
           Golang + React + Redux + Css-Modules
           <br />Isomorphic Starter Kit</h1>
         <br />
-        <p className={p}>
-          Please take a look at <Link className={link} to='/docs'>usage</Link> page.
-          Please take a look at <Link className={link} to='/about'>about</Link> page.
-        </p>*/}
+        <p>
+          Please take a look at <Link to='/docs'>usage</Link> page.
+          Please take a look at <Link to='/about'>about</Link> page.
+        </p>
       </div>
     );
   }

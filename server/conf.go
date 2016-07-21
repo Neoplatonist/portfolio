@@ -16,7 +16,7 @@ var (
 var confString = `
 debug: false
 commit: 0
-port: 5000
+port: 3000
 title: Go Starter Kit
 api:
   prefix: /api
