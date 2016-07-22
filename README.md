@@ -2,6 +2,11 @@
 
 This project contains a quick starter kit for **Facebook React** Single Page Apps with **Golang** server side render and also with a set of useful features for rapid development of efficient applications.
 
+## Neoplatonist Changes:
+* added scss to webpack
+* deleted css vars and funcs
+* added [materialize-css](http://materializecss.com/) framework
+
 ## What it contains?
 
 * server side render via [go-duktape](https://github.com/olebedev/go-duktape)
