@@ -4,7 +4,9 @@ import App from '#app/components/app';
 import Homepage from '#app/components/homepage';
 import Usage from '#app/components/usage';
 import About from '#app/components/about';
-import WikiViewer from '#app/components/projects/wiki-viewer/wiki-viewer.jsx';
+import Projects from '#app/components/projects';
+  import WikiViewer from '#app/components/projects/wiki-viewer';
+    import WikiViewerLive from '#app/components/projects/wiki-viewer/live';
 import NotFound from '#app/components/not-found';
 
 /**
@@ -27,15 +29,18 @@ export default ({store, first}) => {
     };
   }
 
-  return <Route path="/" component={App}>
-    <IndexRoute component={Homepage} onEnter={w(Homepage.onEnter)}/>
-    <Route path="/usage" component={Usage} onEnter={w(Usage.onEnter)}/>
-    <Route path="/about" component={About} onEnter={w(About.onEnter)}/>
-    <Route path="projects">
-      <Route path="wiki-viewer" component={WikiViewer} onEnter={w(WikiViewer.onEnter)}/>
+  return (
+    <Route path="/" component={App}>
+      <IndexRoute component={Homepage} onEnter={w(Homepage.onEnter)}/>
+      <Route path="/usage" component={Usage} onEnter={w(Usage.onEnter)}/>
+      <Route path="/about" component={About} onEnter={w(About.onEnter)}/>
+      <Route path="/projects" component={Projects} onEnter={w(Projects.onEnter)}/>
+      <Route path="/projects/wiki-viewer" component={WikiViewer} onEnter={w(WikiViewer.onEnter)}/>
+      <Route path="/projects/wiki-viewer/live" component={WikiViewerLive} onEnter={w(WikiViewerLive.onEnter)}/>
+
+      {/* Server redirect in action */}
+      <Redirect from="docs" to="usage" />
+      <Route path="*" component={NotFound} onEnter={w(NotFound.onEnter)}/>
     </Route>
-    {/* Server redirect in action */}
-    <Redirect from="/docs" to="/usage" />
-    <Route path="*" component={NotFound} onEnter={w(NotFound.onEnter)}/>
-  </Route>;
+  );
 };

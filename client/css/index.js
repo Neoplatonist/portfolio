@@ -8,6 +8,8 @@ require('./global');
  */
 require('#app/components/app/styles');
 require('#app/components/homepage/styles');
-require('#app/components/projects/wiki-viewer/styles');
+require('#app/components/projects/styles');
+  require('#app/components/projects/wiki-viewer/styles');
+    require('#app/components/projects/wiki-viewer/live/styles');
 require('#app/components/usage/styles');
 require('#app/components/not-found/styles');

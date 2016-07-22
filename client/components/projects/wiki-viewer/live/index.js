@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Helmet from 'react-helmet';
-import Header from './components/header.jsx';
-import { body } from './styles';
+import Header from './components/header';
+import './styles';
 
-export default class WikiViewer extends Component {
+export default class WikiViewerLive extends Component {
   constructor(props) {
     super(props);
 

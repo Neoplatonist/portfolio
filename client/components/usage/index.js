@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { IndexLink } from 'react-router';
-import { usage, todo } from './styles';
+import './styles';
 import { setConfig } from '../../actions';
 
 class Usage extends Component {
@@ -20,16 +20,16 @@ class Usage extends Component {
   /*eslint-enable */
 
   render() {
-    return <div className={usage}>
+    return <div>
       <Helmet title='Usage' />
-      <h2 className={example}>Usage:</h2>
-      <div className={p}>
-        <span className={todo}>// TODO: write an article</span>
-        <pre className={todo}>config:
+      <h2>Usage:</h2>
+      <div>
+        <span>// TODO: write an article</span>
+        <pre>config:
           {JSON.stringify(this.props.config, null, 2)}</pre>
       </div>
       <br />
-      go <IndexLink to='/' className={link}>home</IndexLink>
+      go <IndexLink to='/'>home</IndexLink>
     </div>;
   }
 
