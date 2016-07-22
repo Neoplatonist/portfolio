@@ -26,7 +26,7 @@ export default class Homepage extends Component {
 
   render() {
     return (
-      <div className="main">
+      <div>
         <Helmet
           title='Home page'
           meta={[
@@ -48,24 +48,25 @@ export default class Homepage extends Component {
               <div className="container">
                 <a href="#" className="brand-logo">Logo</a>
                 <ul className="right hide-on-med-and-down">
-                  <li><a href="sass.html">Sass</a></li>
+                  <li><Link to='/projects'>Projects</Link></li>
                   <li><a href="badges.html">Components</a></li>
                   {/* Dropdown Trigger */}
-                  <li><a className="dropdown-button" href="#" data-activates="dropdown1" onClick={this.menuDrop}>Dropdown<i className="material-icons right">arrow_drop_down</i></a></li>
+                  <li><a className="dropdown-button" href="#" data-beloworigin="true" data-activates="dropdown1" onClick={this.menuDrop}>Dropdown<i className="material-icons right">arrow_drop_down</i></a></li>
               </ul>
               </div>
             </div>
           </nav>
-
-        <h1>
-          Hot Reloadable <br />
-          Golang + React + Redux + Css-Modules
-          <br />Isomorphic Starter Kit</h1>
-        <br />
-        <p>
-          Please take a look at <Link to='/docs'>usage</Link> page.
-          Please take a look at <Link to='/about'>about</Link> page.
-        </p>
+        <div className="container">
+          <h1>
+            Hot Reloadable <br />
+            Golang + React + Redux + Css-Modules
+            <br />Isomorphic Starter Kit</h1>
+          <br />
+          <p>
+            Please take a look at <Link to='/docs'>usage</Link> page.
+            Please take a look at <Link to='/about'>about</Link> page.
+          </p>
+        </div>
       </div>
     );
   }
