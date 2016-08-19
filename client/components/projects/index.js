@@ -29,9 +29,7 @@ export default class Projects extends Component {
     return (
       <div>
         <Helmet
-          script={[
-            {'src': '/static/js/jquery.mixitup.min.js', 'type': 'text/javascript'}
-          ]}
+          
         />
 
         <Nav />
