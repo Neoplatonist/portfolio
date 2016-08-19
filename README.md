@@ -1,12 +1,10 @@
 # Portfolio [![wercker status](https://app.wercker.com/status/cd5a782c425b1feb06844dcc701e528c/s/master "wercker status")](https://app.wercker.com/project/bykey/cd5a782c425b1feb06844dcc701e528c)
 
-This project contains a custom portfolio web app built with Golang as the backend. This site was built to showcase and learn.
-
-This project contains a quick starter kit for **Facebook React** Single Page Apps with **Golang** server side render and also with a set of useful features for rapid development of efficient applications.
+This project contains a custom portfolio web app built with Golang as the backend and the view layer with ReactJS. This site was built to showcase and learn.
 
 ## Specs
 * Golang Server based on: [Olebdev Go-Starter-Kit](https://github.com/olebedev/go-starter-kit)
-* ReactJs
+* ReactJS
 * React Router
 * React Helmet
 * Redux
