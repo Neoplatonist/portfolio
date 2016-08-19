@@ -34,31 +34,45 @@ The `./server/` is flat golang package.
 
 ##### The client's entry point
 
-It's simple React application
-
 ```
 $ tree client
 client
 ├── actions.js
 ├── components
+│   ├── about
+│   │   ├── index.js
+│   │   └── styles.css
 │   ├── app
-│   │   ├── favicon.ico
 │   │   ├── index.js
 │   │   └── styles.css
 │   ├── homepage
 │   │   ├── index.js
 │   │   └── styles.css
+│   ├── layouts
+│   │   └── nav
+│   │       ├── index.js
+│   │       └── styles.css
 │   ├── not-found
 │   │   ├── index.js
 │   │   └── styles.css
+│   ├── projects
+│   │   ├── wiki-viewer
+│   │   │   ├── live
+│   │   │   │   ├── components
+│   │   │   │   │   ├── footer.js
+│   │   │   │   │   └── header.js
+│   │   │   │   ├── index.js
+│   │   │   │   └── styles.css
+│   │   │   ├── index.js
+│   │   │   └── styles.css
+│   │   ├── index.js
+│   │   └── styles.css
 │   └── usage
 │       ├── index.js
 │       └── styles.css
 ├── css
-│   ├── funcs.js
 │   ├── global.css
-│   ├── index.js
-│   └── vars.js
+│   └── index.js
 ├── index.js <-- main function declared here
 ├── reducers.js
 ├── router
