@@ -4,15 +4,11 @@ import Helmet from 'react-helmet';
 export default class Footer extends React.Component {
   render() {
     return (
-      <header className="navbar-fixed">
-        <nav>
-          <div className="nav-wrapper blue">
-            <a href="#!" className="brand-logo center">Wikipedia Viewer</a>
-          </div>
-        </nav>
-
-        <div id="notification" className="orange center"></div>
-      </header>
+      <footer className="teal lighten-2">
+        <p>
+          Created By: <a target="_blank" href="http://joshfjohnston.com">Josh Johnston</a> for <a target="_blank" href="https://www.freecodecamp.com">FCC</a> - <a target="_blank" href="https://www.freecodecamp.com/challenges/build-a-wikipedia-viewer">Challenge</a>
+        </p>
+      </footer>
     );
   }
 }

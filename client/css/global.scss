@@ -1,11 +1,15 @@
 // @import 'materialize.min.scss';
 
+body {
+  background-color: #cfd8dc;
+}
+
 /* fallback */
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/materialize-font-icons.woff2) format('woff2');
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url('/static/fonts/materialize-font-icons.woff2') format('woff2');
 }
 
 .material-icons {

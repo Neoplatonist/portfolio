@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { IndexLink } from 'react-router';
-import { notFound } from './styles';
-import { link } from '../homepage/styles';
+import Nav from '../layouts/nav/index';
+import './styles';
 
 export default class NotFound extends Component {
 
   render() {
-    return <div>
-      <Helmet title='404 Page Not Found' />
-      <h2 className={notFound}>
-      404 Page Not Found</h2>
-    <IndexLink to='/' className={link}>go home</IndexLink>
-    </div>;
+    return (
+      <div>
+        <Helmet title='404 Page Not Found' />
+        <Nav />
+        <div className="container">
+          <h2>404 Page Not Found</h2>
+          <IndexLink to='/'>go home</IndexLink>
+        </div>
+      </div>
+    );
   }
-
 }

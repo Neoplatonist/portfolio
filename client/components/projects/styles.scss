@@ -1,0 +1,38 @@
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.card {
+  overflow: hidden;
+
+  .overlay {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: #f57c00;
+    opacity: 0.8;
+
+    h5 {
+      padding-top: 34.5%;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    ul {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+}

@@ -1,11 +1,25 @@
 // @import '../../../css/global.scss';
 
-body {
-  background-color: #607d8b;
-}
-
 .round {
   border-radius: 5px
+}
+
+#wiki-navbar-fixed {
+  height: 100px;
+}
+
+#wiki-nav {
+  height: 100px;
+
+  #wiki-back {
+    margin: 15px 0 0 20px;
+  }
+
+  a#wiki-brand-logo {
+    margin-top: 15px;
+    font-size: 3em;
+    font-family: 'Ovo', serif;
+  }
 }
 
 #wrapper {
@@ -18,6 +32,7 @@ main {
   // display: flex;
   // align-items: center;
   flex: 1 0 auto;
+  padding-bottom: 35px;
 
   #random {
     margin-top: 20px;
@@ -39,42 +54,6 @@ main {
     }
   }
 
-  // .searchItem-appear {
-  //   opacity: 0.01;
-  //
-  //   &.searchItem-appear-active {
-  //     opacity: 1;
-  //     -moz-transition: opacity 1s ease-in;
-  //     -webkit-transition: opacity 1s ease-in;
-  //     -o-transition: opacity 1s ease-in;
-  //     transition: opacity 1s ease-in;
-  //   }
-  // }
-  //
-  // .searchItem-enter {
-  //   opacity: 0.01;
-  //
-  //   &.searchItem-enter-active {
-  //     opacity: 1;
-  //     -moz-transition: opacity 500ms ease-in;
-  //     -webkit-transition: opacity 500ms ease-in;
-  //     -o-transition: opacity 500ms ease-in;
-  //     transition: opacity 500ms ease-in;
-  //   }
-  // }
-  //
-  // .searchItem-leave {
-  //   opacity: 1;
-  //
-  //   &.searchItem-leave-active {
-  //     opacity: 0.01;
-  //     -moz-transition: opacity 300ms ease-in;
-  //     -webkit-transition: opacity 300ms ease-in;
-  //     -o-transition: opacity 300ms ease-in;
-  //     transition: opacity 300ms ease-in;
-  //   }
-  // }
-
   #searchList {
     -moz-transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
@@ -88,8 +67,27 @@ main {
       transform: scale(1.1);
     }
 
+    hr {
+      border: .5px solid #000;
+    }
+
     p {
       padding: 0 20px;
     }
+  }
+}
+
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .1rem;
+  color: #263238;
+  text-align: center;
+  border-top: 1px solid #263238;
+
+  a {
+    color: #fff;
   }
 }

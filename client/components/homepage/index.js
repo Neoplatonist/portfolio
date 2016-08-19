@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
-import './styles';
+import Nav from '../layouts/nav/index';
+import './styles.scss';
 
 export default class Homepage extends Component {
   /*eslint-disable */
@@ -10,19 +11,6 @@ export default class Homepage extends Component {
     callback(); // this call is important, don't forget it
   }
   /*eslint-enable */
-
-  menuDrop() {
-    $('.dropdown-button').dropdown({
-      inDuration: 300,
-      outDuration: 225,
-      constrain_width: false, // Does not change width of dropdown to that of the activator
-      hover: true, // Activate on hover
-      gutter: 0, // Spacing from edge
-      belowOrigin: true, // Displays dropdown below the button
-      alignment: 'left' // Displays dropdown with edge aligned to the left of button
-    }
-  );
-  }
 
   render() {
     return (
@@ -34,28 +22,11 @@ export default class Homepage extends Component {
               property: 'og:title',
               content: 'Golang Isomorphic React/Hot Reloadable/Redux/Css-Modules Starter Kit'
             }
-          ]} />
+          ]}
+        />
 
-          {/* Dropdown Structure */}
-          <ul id="dropdown1" className="dropdown-content">
-            <li><a href="#">one</a></li>
-            <li><a href="#">two</a></li>
-            <li className="divider"></li>
-            <li><a href="#">three</a></li>
-          </ul>
-          <nav>
-            <div className="nav-wrapper">
-              <div className="container">
-                <a href="#" className="brand-logo">Logo</a>
-                <ul className="right hide-on-med-and-down">
-                  <li><Link to='/projects'>Projects</Link></li>
-                  <li><a href="badges.html">Components</a></li>
-                  {/* Dropdown Trigger */}
-                  <li><a className="dropdown-button" href="#" data-beloworigin="true" data-activates="dropdown1" onClick={this.menuDrop}>Dropdown<i className="material-icons right">arrow_drop_down</i></a></li>
-              </ul>
-              </div>
-            </div>
-          </nav>
+        <Nav />
+
         <div className="container">
           <h1>
             Hot Reloadable <br />
@@ -66,6 +37,9 @@ export default class Homepage extends Component {
             Please take a look at <Link to='/docs'>usage</Link> page.
             Please take a look at <Link to='/about'>about</Link> page.
           </p>
+
+          <button className="waves-effect waves-light orange btn">Button</button>
+
         </div>
       </div>
     );
