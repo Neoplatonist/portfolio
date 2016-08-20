@@ -1,3 +1,39 @@
 .button-collapse {
   margin-left: 20px;
 }
+
+#XMLID_244_ {
+  pointer-events: bounding-box;
+
+  &:hover {
+    display: none;
+  }
+}
+
+nav {
+  background-image: url('/static/images/JoshHeader.svg');
+  background-size: cover;
+  height: 170px;
+  padding: 0 -5px;
+  // overflow-y: visible;
+  background-color: transparent;
+  // margin-bottom: 20px;
+  border-radius: 0;
+  box-shadow: none;
+
+  .nav-wrapper {
+
+  //   img {
+  //     position: fixed;
+  //     top: 0;
+  //     left: 0;
+  //     z-index: 2;
+  //   }
+  //
+  //   ul.right {
+  //     position: fixed;
+  //     right: 320px;
+  //     z-index: 3;
+  //   }
+  }
+}

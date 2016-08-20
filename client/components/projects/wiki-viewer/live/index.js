@@ -68,7 +68,13 @@ export default class WikiViewerLive extends Component {
     return (
       <div>
         <Helmet
-          title="Wiki Viewer"
+          title='Wiki Viewer - Josh F. Johnston'
+          meta={[
+            {
+              property: 'og:title',
+              content: 'Wikipedia Viewer project by Josh F. Johnston'
+            }
+          ]}
           link={[
             {'rel': 'stylesheet', 'href': 'https://fonts.googleapis.com/css?family=Ovo'}
           ]}
@@ -77,7 +83,6 @@ export default class WikiViewerLive extends Component {
         <Header />
 
         <main className="container">
-          <Helmet title='Go + React + Redux = rocks!' />
           <div className="row">
             <div className="col s12 center">
               <h6 id="random"><a target="_blank" href="https://en.wikipedia.org/wiki/Special:Random" className="light-blue-text lighten-2">Click Here for a Random Article</a></h6>

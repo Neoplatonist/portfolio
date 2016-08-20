@@ -1,6 +1,6 @@
 # Portfolio [![wercker status](https://app.wercker.com/status/cd5a782c425b1feb06844dcc701e528c/s/master "wercker status")](https://app.wercker.com/project/bykey/cd5a782c425b1feb06844dcc701e528c)
 
-This project contains a custom portfolio web app built with Golang as the backend and the view layer with ReactJS. This site was built to showcase and learn.
+This project contains my custom portfolio web app built with Golang as the backend and the view layer with ReactJS. This site was built for educational purposes and to showcase my portfolio.
 
 ## Specs
 * Golang Server based on: [Olebdev Go-Starter-Kit](https://github.com/olebedev/go-starter-kit)
@@ -23,8 +23,13 @@ server
 ├── bindata.go <-- this file is gitignored, it will appear at compile time
 ├── conf.go
 ├── data
-│   └── templates
-│       └── react.html
+│   ├── static <-- static images, js libraries, css libraries, and fonts go here. To Use: example.com/static/your/content
+│   │   ├── css
+│   │   ├── fonts
+│   │   ├── images
+│   │   └── js
+│   └── templates
+│       └── react.html
 ├── main.go <-- main function declared here
 ├── react.go
 └── utils.go
