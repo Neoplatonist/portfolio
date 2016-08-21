@@ -4,12 +4,14 @@ This project contains my custom portfolio web app built with Golang as the backe
 
 ## Specs
 * Golang Server based on: [Olebdev Go-Starter-Kit](https://github.com/olebedev/go-starter-kit)
+* Golang HTTP framework [Echo v1](https://github.com/labstack/echo)
 * ReactJS
 * React Router
 * React Helmet
 * Redux
-* [MaterializeCss](http://materializecss.com/) framework
 * Webpack with hot reload
+* ESLint
+* [MaterializeCss](http://materializecss.com/) framework
 
 
 ## Project structure
@@ -66,6 +68,12 @@ client
 │   │   │   │   ├── components
 │   │   │   │   │   ├── footer.js
 │   │   │   │   │   └── header.js
+│   │   │   │   ├── index.js
+│   │   │   │   └── styles.css
+│   │   │   ├── index.js
+│   │   │   └── styles.css
+│   │   ├── quote-generator
+│   │   │   ├── live
 │   │   │   │   ├── index.js
 │   │   │   │   └── styles.css
 │   │   │   ├── index.js
