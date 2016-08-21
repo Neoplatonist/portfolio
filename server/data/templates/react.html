@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"> -->
     <link rel="stylesheet" href="/static/css/materialize.min.css">
-    <link rel="stylesheet" href="/static/fonts/materialize-font-icons.woff2">
-    <link rel="stylesheet" href="/static/fonts/Courgette.woff2">
+    <!-- <link rel="stylesheet" href="/static/fonts/materialize-font-icons.woff2">
+    <link rel="stylesheet" href="/static/fonts/Courgette.woff2"> -->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link rel="stylesheet" href="/static/build/bundle.css">
     {{ .HTMLTitle }}
@@ -45,10 +45,15 @@
     {{end}}
     <div id="app">{{ .HTMLApp }}</div>
     <script onload="this.parentElement.removeChild(this)">window['--app-initial'] = JSON.parse("{{if .Initial}}{{ .Initial }}{{else}}{}{{end}}");</script>
-    <!-- <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
-    <script src="/static/js/jquery-3.1.0.min.js"></script>
-    <!-- <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script> -->
-    <script src="/static/js/materialize.min.js"></script>
+    <script>
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        document.write('<script src="/static/js/jquery-3.1.0.min.js"><\/script>');
+        document.write('<script src="/static/js/materialize.min.js"><\/script>');
+      } else {
+        document.write('<script async src="/static/js/jquery-3.1.0.min.js"><\/script>');
+        document.write('<script async src="/static/js/materialize.min.js"><\/script>');
+      }
+    </script>
     <script async defer src="/static/build/bundle.js" onload="this.parentElement.removeChild(this)"></script>
   </body>
 </html>

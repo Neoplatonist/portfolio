@@ -8,7 +8,7 @@ export default class Header extends React.Component {
         <nav id="wiki-nav">
           <div id="wiki-nav-wrapper" className="nav-wrapper teal lighten-2">
             <a id="wiki-brand-logo" href="#!" className="brand-logo center">Wikipedia Viewer</a>
-            <ul id="nav-mobile" class="left">
+            <ul id="nav-mobile" className="left">
               <li id="wiki-back"><Link to="/projects/wiki-viewer">Go Back</Link></li>
             </ul>
           </div>
