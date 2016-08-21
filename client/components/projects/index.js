@@ -66,7 +66,7 @@ export default class Projects extends Component {
                     </ul>
                   </div>
 
-                  <img src="/static/images/wiki-viewer-3.jpg" alt="wiki viewer app screenshot" />
+                  <img src="/static/images/wiki-viewer-cover.jpg" alt="wiki viewer app screenshot" />
 
                 </div>
               </div>

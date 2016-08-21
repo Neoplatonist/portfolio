@@ -94,7 +94,7 @@ export default class WikiViewerLive extends Component {
           <div id="search-container" className="row">
             <div className="col s6 offset-s3">
               {/* Notices changes to input the queries Wikipedia API */}
-              <input id="search" type="text" onChange={this.handleChange} placeholder="Type to Search" className="black-text lighten-2"/>
+              <input id="search" className="black-text lighten-2" type="text" onChange={this.handleChange} placeholder="Type to Search" autoFocus />
             </div>
           </div>
           <div className="row">
