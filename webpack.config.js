@@ -47,7 +47,7 @@ var config  = {
       {test: /\.scss/, loader: ExtractTextPlugin.extract("style", "css!sass")},
       // {test: /\.css/, loader: ExtractTextPlugin.extract('style-loader', postCssLoader.join(''))},
       {test: /\.(png|gif)$/, loader: 'url-loader?name=[name]@[hash].[ext]&limit=5000'},
-      {test: /\.svg$/, loader: 'url-loader?name=[name]@[hash].[ext]&limit=5000!svgo-loader?useConfig=svgo1'},
+      {test: /\.svg$/, loader: 'url-loader?name=[name]@[hash].[ext]!svgo-loader?useConfig=svgo1'},
       {test: /\.(pdf|ico|jpg|png|eot|otf|woff|woff2|ttf|mp4|webm)$/, loader: 'file-loader?name=[name]@[hash].[ext]'},
       {test: /\.json$/, loader: 'json-loader'},
       {

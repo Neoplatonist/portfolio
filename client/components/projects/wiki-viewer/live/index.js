@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Helmet from 'react-helmet';
 import Header from './components/header';
 import Footer from './components/footer';

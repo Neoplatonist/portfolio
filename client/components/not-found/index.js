@@ -12,7 +12,7 @@ export default class NotFound extends Component {
         <Helmet title='404 Page Not Found' />
         <Nav />
         <div className="container">
-          <h2>404 Page Not Found</h2>
+          <h2 className="flow-text">404 Page Not Found</h2>
           <IndexLink to='/'>go home</IndexLink>
         </div>
       </div>

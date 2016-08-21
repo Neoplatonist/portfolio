@@ -25,11 +25,12 @@ export default class Nav extends Component {
 
   render() {
     return (
-      <nav>
+      <nav id="main-nav">
         <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
         <div className="nav-wrapper container">
           {/* <img src="/static/images/JoshHeader.svg" alt=""/> */}
-          <Link to="/" className="brand-logo"></Link>
+          <Link to="/" className="brand-logo">Josh F. Johnston</Link>
+          {/* <img src="/static/images/JoshuaPortrait.svg" alt="Josh's Portrait"/> */}
           <ul className="right hide-on-med-and-down">
             <li><Link to="/projects">Projects</Link></li>
             <li><Link to="/blog">Blog</Link></li>

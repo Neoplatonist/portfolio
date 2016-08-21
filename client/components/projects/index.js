@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Link } from 'react-router';
 import Helmet from 'react-helmet';
 import Nav from '../layouts/nav/index';
@@ -25,11 +24,19 @@ export default class Projects extends Component {
     $(".ovly1").addClass("hide");
   }
 
+  ovly2Enter() {
+    $(".ovly2").removeClass("hide");
+  }
+
+  ovly2Leave() {
+    $(".ovly2").addClass("hide");
+  }
+
   render() {
     return (
       <div>
         <Helmet
-          
+
         />
 
         <Nav />
@@ -37,7 +44,7 @@ export default class Projects extends Component {
         <div className="container">
           <div className="row">
             <div className="col s12">
-              <h2 className="center">Project List</h2>
+              <h2 className="center-align">Project List</h2>
             </div>
           </div>
         </div>
@@ -59,20 +66,31 @@ export default class Projects extends Component {
                     </ul>
                   </div>
 
-                  <img src="http://placehold.it/300x300" alt="wiki viewer app screenshot" />
+                  <img src="/static/images/wiki-viewer-3.jpg" alt="wiki viewer app screenshot" />
 
                 </div>
               </div>
             </Link>
 
-            <Link to="/projects/">
-            <div className="col s12 m6 l3">
-              <div className="card">
+            <Link to="/projects/quote-generator">
+              <div className="col s12 m6 l3">
+                <div className="card"
+                  onMouseEnter={this.ovly2Enter}
+                  onMouseLeave={this.ovly2Leave}>
 
-                <img src="http://placehold.it/300x300" alt="wiki viewer app screenshot" />
+                  <div className="overlay ovly2 hide">
+                    <h5>Quote Generator</h5>
+                    <ul>
+                      <li className="chip">HTML5</li>
+                      <li className="chip">CSS3</li>
+                      <li className="chip">Javascript</li>
+                    </ul>
+                  </div>
 
+                  <img src="http://placehold.it/300x300" alt="wiki viewer app screenshot" />
+
+                </div>
               </div>
-            </div>
             </Link>
 
             <Link to="/projects/">

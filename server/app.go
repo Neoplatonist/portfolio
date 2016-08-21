@@ -55,6 +55,7 @@ func NewApp(opts ...AppOptions) *App {
 	engine.SetDebug(conf.UBool("debug"))
 
 	// Regular middlewares
+	engine.Use(middleware.Gzip())
 	engine.Use(middleware.Logger())
 	engine.Use(middleware.Recover())
 

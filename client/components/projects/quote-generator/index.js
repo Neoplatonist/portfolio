@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import Helmet from 'react-helmet';
-import WikiViewerLive from './live/index';
+import QuoteGeneratorLive from './live/index';
 import Nav from '../../layouts/nav/index';
 import './styles.scss';
 
-export default class WikiViewer extends Component {
+export default class QuoteGenerator extends Component {
   /*eslint-disable */
   static onEnter({store, nextState, replaceState, callback}) {
     // Load here any data.
@@ -23,8 +23,8 @@ export default class WikiViewer extends Component {
         <Nav />
 
         <div className="container">
-          <h2 className="flow-text">Wiki Viewer Description</h2>
-          <Link to='/projects/wiki-viewer/live'>Live</Link>
+          <h2 className="flow-text">Quote Generator Description</h2>
+          <Link to='/projects/quote-generator/live'>Live</Link>
         </div>
       </div>
     );

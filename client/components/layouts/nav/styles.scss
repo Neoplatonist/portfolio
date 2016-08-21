@@ -2,19 +2,19 @@
   margin-left: 20px;
 }
 
-#XMLID_244_ {
-  pointer-events: bounding-box;
+// #XMLID_244_ {
+//   pointer-events: bounding-box;
+//
+//   &:hover {
+//     display: none;
+//   }
+// }
 
-  &:hover {
-    display: none;
-  }
-}
-
-nav {
+#main-nav {
   background-image: url('/static/images/JoshHeader.svg');
   background-size: cover;
   height: 170px;
-  padding: 0 -5px;
+  // margin: 0 -10px;
   // overflow-y: visible;
   background-color: transparent;
   // margin-bottom: 20px;
@@ -22,13 +22,22 @@ nav {
   box-shadow: none;
 
   .nav-wrapper {
+    .brand-logo {
+      font-size: 1.7em;
+      margin: 20px 0 0 100px;
+      font-family: 'Courgette', cursive;
+      // position: relative;
+      // top: 20px;
+      // left: 100px;
+    }
 
-  //   img {
-  //     position: fixed;
-  //     top: 0;
-  //     left: 0;
-  //     z-index: 2;
-  //   }
+    // img {
+    //   position: fixed;
+    //   top: 20.42px;
+    //   left: 305px;
+    //   width: 120px;
+    //   height: 120px;
+    // }
   //
   //   ul.right {
   //     position: fixed;
