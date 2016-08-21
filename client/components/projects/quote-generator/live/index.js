@@ -14,10 +14,11 @@ export default class QuoteGeneratorLive extends Component {
   constructor(props) {
     super(props);
 
-    this.getQuote = this.getQuote.bind(this);
+    // binds context of this to the function calls
     this.newQuote = this.newQuote.bind(this);
     this.sendTweet = this.sendTweet.bind(this);
 
+    // sets initial state
     this.state = {
       quote: '',
       author: '',
@@ -27,13 +28,15 @@ export default class QuoteGeneratorLive extends Component {
 
   componentWillMount() {
     $('#main-nav').css('display', 'none');
-    this.getQuote();
+    this.getQuote(); // Initiates first quote
   }
 
   componentWillUnmount() {
     $('#main-nav').css('display', 'block');
   }
 
+
+  // Calls quotes from API
   getQuote() {
     var xhr = new XMLHttpRequest();
     var url = 'https://andruxnet-random-famous-quotes.p.mashape.com/';
@@ -42,10 +45,8 @@ export default class QuoteGeneratorLive extends Component {
     xhr.onreadystatechange = () => {
       if (xhr.readyState == 4 && xhr.status == 200) {
         data = JSON.parse(xhr.responseText);
-        // document.getElementById('quote').innerHTML = data.quote;
-        // document.getElementById('author').innerHTML = '- ' + data.author;
-        this.setState({quote: data.quote});
-        this.setState({author: '- ' + data.author});
+        this.setState({quote: data.quote}); // stores quote into state
+        this.setState({author: '- ' + data.author}); // stores author into state
         $('#quote').fadeIn();
         $('#author').fadeIn();
       }
@@ -58,6 +59,7 @@ export default class QuoteGeneratorLive extends Component {
     xhr.send();
   }
 
+  // Gets new quote from API
   newQuote() {
     document.getElementById('notification').innerHTML = '';
     $('#quote').fadeOut();
@@ -65,13 +67,13 @@ export default class QuoteGeneratorLive extends Component {
     this.getQuote();
   }
 
+  // Sends quote and author to Twitter's post API
   sendTweet() {
     var tweet = this.state.quote + ' ' + this.state.author;
     if (tweet.length < 140) {
       var tweetURL = 'http://twitter.com/home?status=' + encodeURIComponent(tweet);
       window.open(tweetURL,'_blank');
     } else {
-      // document.getElementById('notification').innerHTML = 'Tweet has to be less than 140 characters.';
       this.setState({notification: 'Tweet has to be less than 140 characters.'});
     }
   }
@@ -84,13 +86,14 @@ export default class QuoteGeneratorLive extends Component {
             <nav id="qg-nav">
               <div id="qg-nav-wrapper" className="nav-wrapper purple">
                 <a id="qg-brand-logo"href="#!" className="brand-logo center">Quote Generator</a>
-                <ul id="nav-mobile" class="left">
+                <ul id="nav-mobile" className="left">
                   <li id="qg-back"><Link to="/projects/quote-generator">Go Back</Link></li>
                 </ul>
               </div>
             </nav>
           </div>
 
+          {/* Notifies user if quote is too large for Twitter */}
           <div id="notification" className="orange center">{ this.state.notification }</div>
         </header>
 
@@ -100,15 +103,18 @@ export default class QuoteGeneratorLive extends Component {
               <div className="col s6 offset-s3">
                 <div className="card">
                   <div className="card-content">
+                    {/* Displays quote and author */}
                     <h5 id="quote" className="">{ this.state.quote }</h5>
                     <p id="author" className="right">{ this.state.author }</p>
                   </div>
                   <div className="card-action center">
                     <div className="row">
                       <div className="col m6 s12">
+                        {/* Gets new quote */}
                         <a id="newQuote" className="btn purple left" href="#" onClick={this.newQuote}>New Quote</a>
                       </div>
                       <div className="col m6 s12">
+                        {/* Attempts to tweet the current quote */}
                         <a id="tweet" className="btn purple right" href="#" onClick={this.sendTweet}>Tweet It</a>
                       </div>
                     </div>

@@ -15,31 +15,34 @@ export default class WikiViewerLive extends Component {
   constructor(props) {
     super(props);
 
+    // binds context of this to the function calls
     this.handleChange = this.handleChange.bind(this);
 
+    // sets initial state
     this.state = {
       list: {},
-    }
+    };
   }
 
   componentWillMount() {
-    document.body.style.backgroundColor = "#e0f2f1";
+    document.body.style.backgroundColor = '#e0f2f1';
   }
 
   componentWillUnmount() {
-    document.body.style.backgroundColor = "#cfd8dc";
+    document.body.style.backgroundColor = '#cfd8dc';
   }
 
+  // Sends query to Wikipedia through their API
   handleChange(event) {
     var query = event.target.value;
-    var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
-      query + "&limit=10&namespace=0&format=json";
+    var url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' +
+      query + '&limit=10&namespace=0&format=json';
 
     $.ajax({
       url: url,
-      method: "GET",
-      dataType: "jsonp",
-      headers: { "Api-User-Agent": "WikiViewer/1.0" },
+      method: 'GET',
+      dataType: 'jsonp',
+      headers: { 'Api-User-Agent': 'WikiViewer/1.0' },
       success: function(data) {
         this.setState({list: data});
       }.bind(this)
@@ -84,16 +87,19 @@ export default class WikiViewerLive extends Component {
         <main className="container">
           <div className="row">
             <div className="col s12 center">
+              {/* Sends to random Wikipedia article */}
               <h6 id="random"><a target="_blank" href="https://en.wikipedia.org/wiki/Special:Random" className="light-blue-text lighten-2">Click Here for a Random Article</a></h6>
             </div>
           </div>
           <div id="search-container" className="row">
             <div className="col s6 offset-s3">
+              {/* Notices changes to input the queries Wikipedia API */}
               <input id="search" type="text" onChange={this.handleChange} placeholder="Type to Search" className="black-text lighten-2"/>
             </div>
           </div>
           <div className="row">
             <div className="col s12">
+              {/* Output of queried results */}
               {this.searchList(this.state.list)}
             </div>
           </div>
