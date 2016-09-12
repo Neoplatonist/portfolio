@@ -28,7 +28,7 @@ export default class Homepage extends Component {
         <Nav />
 
         <div className="container">
-          <h1>
+          {/* <h1>
             Hot Reloadable <br />
             Golang + React + Redux + Css-Modules
             <br />Isomorphic Starter Kit</h1>
@@ -38,8 +38,17 @@ export default class Homepage extends Component {
             Please take a look at <Link to='/about'>about</Link> page.
           </p>
 
-          <button className="waves-effect waves-light orange btn">Button</button>
+          <button className="waves-effect waves-light orange btn">Button</button> */}
 
+          <div className="main-card">
+            <div className="c-title">
+              <h1 className="grey-text text-lighten-4">Welcome To My Adventure</h1>
+            </div>
+            <div className="c-content">
+              <h3 className="grey-text text-lighten-3">My name is Josh Johnston.</h3>
+              <h3 className="grey-text text-lighten-3">I'm a developer.</h3>
+            </div>
+          </div>
         </div>
       </div>
     );

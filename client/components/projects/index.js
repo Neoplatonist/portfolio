@@ -44,7 +44,7 @@ export default class Projects extends Component {
         <div className="container">
           <div className="row">
             <div className="col s12">
-              <h2 className="center-align">Project List</h2>
+              <h3 className="center-align">Project List</h3>
             </div>
           </div>
         </div>

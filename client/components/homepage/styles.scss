@@ -1,3 +1,29 @@
-// #body {
-//   overflow-y: scroll;
-// }
+#body {
+  background-image: url('/static/images/home-bg.jpg');
+  background-size: cover;
+  height: 100vh;
+}
+
+.main-card {
+  margin-top: 30vh;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  .c-title {
+    margin-top: 40px;
+    // border-bottom: 1px solid rgba(33, 150, 243, 1);
+
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .c-content {
+    margin: 20px 0px;
+
+    h3:last-child {
+      margin-top: -10px;
+    }
+  }
+}

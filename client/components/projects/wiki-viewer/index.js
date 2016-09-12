@@ -22,13 +22,13 @@ export default class WikiViewer extends Component {
       <div>
         <Nav />
 
-        <div className="project-header blue-grey lighten-2">
-          <h2 className="center-align blue-grey-text darken-4">Wiki Viewer</h2>
-          <h4 className="center-align blue-grey-text darken-4">Description</h4>
+        <div className="project-header">
+          <h2 className="center-align">Wiki Viewer</h2>
+          <h4 className="center-align">Description</h4>
         </div>
 
         <div className="container info row">
-          <div className="description col s7 white">
+          <div className="description col s12 m7 white">
             <h4 className="center-align">Free Code Camp's -  Wikipedia Viewer Project</h4>
 
             <p><Link target="_blank" to="https://www.freecodecamp.com">Free Code Camp</Link> provided me with a foundation, teaching me Javascript from the ground up. This is one of their intermediate challenges that I decided to try to construct with ReactJS. The projects requirements are:</p>
@@ -43,7 +43,7 @@ export default class WikiViewer extends Component {
             <p>I attached an event listener, on change, to the user input, search. The value picked up from the search is then queried against Wikipedia's api. The results are returned back using the state, list. A function takes the state, list, and parses it's url, title, and description. Using ReactJS's state allows me to give the web app continuous reactivity. Thus giving the user almost intant feedback.</p>
           </div>
 
-          <div className="extra-info col s5 l5">
+          <div className="extra-info col s12 m5 l5">
             {/* <div className="my-slider">
               <ul>
                 <li><img src="/static/images/wiki-viewer-1.png" /></li>
@@ -51,7 +51,7 @@ export default class WikiViewer extends Component {
                 <li><img src="/static/images/wiki-viewer-3.png" /></li>
               </ul>
             </div> */}
-            <div className="preview blue-grey">
+            <div className="row preview blue-grey">
             will add an image slider
 
               {/* <div className="carousel" data-indicators="true">
@@ -65,15 +65,15 @@ export default class WikiViewer extends Component {
               Will create an image slider and change color! */}
             </div>
 
-            <div className="specs">
+            <div className="row specs">
               <h5>Specs:</h5>
 
               <p>Will add specs</p>
 
               <div className="center-align">
-                <Link className="blue-text spec-link" to="https://www.freecodecamp.com/challenges/build-a-wikipedia-viewer">FreeCodeCamp</Link>
-                <Link className="blue-text spec-link" to="">CodePen</Link>
-                <Link className="blue-text spec-link" to="">Github</Link>
+                <Link className="blue-text spec-link" target="_blank" to="https://www.freecodecamp.com/challenges/build-a-wikipedia-viewer">FreeCodeCamp</Link>
+                <Link className="blue-text spec-link" target="_blank" to="http://codepen.io/Neoplatonist/pen/RRoMey">CodePen</Link>
+                <Link className="blue-text spec-link" target="_blank" to="https://github.com/Neoplatonist/FCC-react-wiki-viewer">Github</Link>
                 <Link className="blue-text spec-link" to='/projects/wiki-viewer/live'>Live</Link>
               </div>
             </div>
