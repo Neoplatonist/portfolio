@@ -7,7 +7,6 @@ export default class App extends Component {
     return (
       <div>
         <Helmet title='Go + React + Redux = rocks!' />
-        {/*<Nav />*/}
         {this.props.children}
       </div>
     );

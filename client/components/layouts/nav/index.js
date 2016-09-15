@@ -27,7 +27,7 @@ export default class Nav extends Component {
   render() {
     return (
       <nav id="main-nav">
-        <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
+        <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons black-text">menu</i></a>
         <div className="nav-wrapper container">
           <div className="row center-nav">
             <ul className="hide-on-med-and-down">

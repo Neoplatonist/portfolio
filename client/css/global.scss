@@ -1,9 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 
 body {
   // background-image: url('/static/images/HardFloor.jpg');
   // background-size: cover;
   // height: 100vh;
-  // // background-color: #eceff1;
+  // background-color: #eceff1;
   background-color: #fafafa;
 }
 
@@ -35,3 +39,151 @@ body {
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
+
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+// #slider {
+//   // background: #000;
+//   // border: 5px solid #eaeaea;
+//   // box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+//   height: 267px;
+//   margin: 0 auto;
+//   overflow: visible;
+//   position: relative;
+//
+//   #mask {
+//     overflow: hidden;
+//     height: 267px;
+//   }
+//
+//   ul {
+//     margin: 0;
+//     padding: 0;
+//     position: relative;
+//   }
+//
+//   li {
+//     height: 267px;
+//     position: absolute;
+//     top: -272px;
+//     list-style: none;
+//
+//     &.firstanimation {
+//       animation: cycle 12s linear infinite;
+//     }
+//     &.secondanimation {
+//       animation: cycletwo 12s linear infinite;
+//     }
+//     &.thirdanimation {
+//       animation: cyclethree 12s linear infinite;
+//     }
+//
+//     img {
+//       height: 100%;
+//       object-fit: cover;
+//       object-position: 50% 50%;
+//     }
+//
+//     span.tooltip {
+//       width: 250px;
+//       height: 60px;
+//       position: relative;
+//       bottom: 95px;
+//       left: -280px;
+//       z-index: 1;
+//       transition: all 0.3s ease-in-out;
+//
+//       h1 {
+//         background: rgba(0,0,0,0.7) !important;
+//         text-align: center;
+//         width: 250px;
+//         color: #fff;
+//         font-size: 24px;
+//         font-weight: 300;
+//         line-height: 60px;
+//       }
+//     }
+//   }
+//
+//   .progress-bar {
+//     position: relative;
+//     top: -5px;
+//     width: 533px;
+//     height: 5px;
+//     background: #000;
+//     animation: fullexpand 12s ease-out infinite;
+//   }
+//
+//   li#first:hover .tooltip,
+//   li#second:hover .tooltip,
+//   li#third:hover .tooltip,
+//   li#fourth:hover .tooltip,
+//   li#fifth:hover .tooltip {
+//   	left:0px;
+//   }
+//
+//   &:hover li,
+//   &:hover .progress-bar {
+//     animation-play-state: paused;
+//   }
+// }
+//
+//
+// @keyframes cycle {
+//   0%  { top:0px; }
+//   4%  { top:0px; }
+//   33% { top:0px; opacity:1; z-index:0; }
+//   37% { top:272px; opacity:0; z-index:0; }
+//   38% { top:-272px; opacity:0; z-index:-1; }
+//   50% { top:-272px; opacity:0; z-index:-1; }
+//   92% { top:-272px; opacity:0; z-index:0; }
+//   96% { top:-272px; opacity:0; }
+//   100%{ top:0px; opacity:1; }
+// }
+// @keyframes cycletwo {
+//   0%  { top:-272px; opacity:0; }
+//   33% { top:-272px; opacity:0; }
+//   37% { top:0px; opacity:1; }
+//   40% { top:0px; opacity:1; }
+//   67% { top:0px; opacity:1; z-index:0; }
+//   70% { top:272px; opacity:0; z-index:0; }
+//   71% { top:-272px; opacity:0; z-index:-1; }
+//   100%{ top:-272px; opacity:0; z-index:-1; }
+// }
+// @keyframes cyclethree {
+//   0%  { top:-325px; opacity:0; }
+//   67% { top:-325px; opacity:0; }
+//   70% { top:0px; opacity:1; }
+//   84% { top:0px; opacity:1; }
+//   96% { top:0px; opacity:1; z-index:0; }
+//   100%{ top:325px; opacity:0; z-index:0; }
+// }
+// @keyframes fullexpand {
+//   0%, 37%, 70%, 99% { width:0%; opacity:0; }
+//   4%, 41%, 67% { width:0%; opacity:0.3; }
+//   31%, 65%, 97% { width:100%; opacity:0.7; }
+//   32%, 66%, 98% { width:100%; opacity:0.3; }
+//   33%, 67%, 99% { width:100%; opacity:0; }
+// }

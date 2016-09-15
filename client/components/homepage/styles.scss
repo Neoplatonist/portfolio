@@ -27,3 +27,47 @@
     }
   }
 }
+
+@media only screen and (max-width: 1338px) {
+  .main-card {
+    margin-top: 15vh;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main-card {
+    margin-top: 20vh;
+    width: 50vw;
+
+    .c-title {
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+
+    .c-content {
+      h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 598px) {
+  .main-card {
+    margin-top: 20vh;
+    width: 70vw;
+
+    .c-title {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    .c-content {
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

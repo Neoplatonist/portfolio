@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import Nav from '../layouts/nav/index';
@@ -12,6 +13,7 @@ export default class Homepage extends Component {
   }
   /*eslint-enable */
 
+
   render() {
     return (
       <div id="body">
@@ -20,7 +22,7 @@ export default class Homepage extends Component {
           meta={[
             {
               property: 'og:title',
-              content: 'Golang Isomorphic React/Hot Reloadable/Redux/Css-Modules Starter Kit'
+              content: 'Josh F. Johnston - Homepage'
             }
           ]}
         />
@@ -41,8 +43,8 @@ export default class Homepage extends Component {
           <button className="waves-effect waves-light orange btn">Button</button> */}
 
           <div className="main-card">
-            <div className="c-title">
-              <h1 className="grey-text text-lighten-4">Welcome To My Adventure</h1>
+            <div id="typed" className="c-title">
+              <h1 id="t-h1" className="grey-text text-lighten-4">Welcome To My Adventure</h1>
             </div>
             <div className="c-content">
               <h3 className="grey-text text-lighten-3">My name is Josh Johnston.</h3>

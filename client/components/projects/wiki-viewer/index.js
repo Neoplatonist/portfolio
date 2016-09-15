@@ -22,13 +22,19 @@ export default class WikiViewer extends Component {
       <div>
         <Nav />
 
-        <div className="project-header">
-          <h2 className="center-align">Wiki Viewer</h2>
-          <h4 className="center-align">Description</h4>
+        <div className="project-header container">
+          <h3 className="center-align">Wiki Viewer</h3>
+          <h5 className="center-align">Allows the user to reactively search the first 10 results of Wikipedia.</h5>
+          <ul>
+            <span>Specs: </span>
+            <li className="chip">Javascript</li>
+            <li className="chip">ReactJS</li>
+            <li className="chip">NodeJS</li>
+          </ul>
         </div>
 
-        <div className="container info row">
-          <div className="description col s12 m7 white">
+        {/* <div className="container row">
+          <div className="description col s12">
             <h4 className="center-align">Free Code Camp's -  Wikipedia Viewer Project</h4>
 
             <p><Link target="_blank" to="https://www.freecodecamp.com">Free Code Camp</Link> provided me with a foundation, teaching me Javascript from the ground up. This is one of their intermediate challenges that I decided to try to construct with ReactJS. The projects requirements are:</p>
@@ -42,44 +48,79 @@ export default class WikiViewer extends Component {
 
             <p>I attached an event listener, on change, to the user input, search. The value picked up from the search is then queried against Wikipedia's api. The results are returned back using the state, list. A function takes the state, list, and parses it's url, title, and description. Using ReactJS's state allows me to give the web app continuous reactivity. Thus giving the user almost intant feedback.</p>
           </div>
+        </div> */}
 
-          <div className="extra-info col s12 m5 l5">
-            {/* <div className="my-slider">
-              <ul>
-                <li><img src="/static/images/wiki-viewer-1.png" /></li>
-                <li><img src="/static/images/wiki-viewer-2.png" /></li>
-                <li><img src="/static/images/wiki-viewer-3.png" /></li>
-              </ul>
-            </div> */}
-            <div className="row preview blue-grey">
-            will add an image slider
+        <div className="container info row">
+          <div className="description col s12">
+            <h4 className="center-align">Free Code Camp's -  Wikipedia Viewer Project</h4>
 
-              {/* <div className="carousel" data-indicators="true">
-                <a className="carousel-item" href="#one!"><img src="/static/images/wiki-viewer-1.png" /></a>
-                <a className="carousel-item" href="#two!"><img src="/static/images/wiki-viewer-2.png" /></a>
-                <a className="carousel-item" href="#three!"><img src="/static/images/wiki-viewer-3.png" /></a>
-              </div> */}
-              {/* <img className="col s12 m4" src="/static/images/wiki-viewer-1.png" alt=""/>
-              <img className="col s12 m4" src="/static/images/wiki-viewer-2.png" alt=""/>
-              <img className="col s12 m4" src="/static/images/wiki-viewer-3.png" alt=""/>
-              Will create an image slider and change color! */}
+            <p><Link target="_blank" to="https://www.freecodecamp.com">Free Code Camp</Link> provided me with a foundation, teaching me Javascript from the ground up. This is one of their intermediate challenges that I decided to try to construct with ReactJS. The projects requirements are:</p>
+
+            <ul className="browser-default">
+              <li className="browser-default">User Story: I can search Wikipedia entries in a search box and see the resulting Wikipedia entries.</li>
+              <li className="browser-default">User Story: I can click a button to see a random Wikipedia entry.</li>
+            </ul>
+
+            <p>This was my first project that I used an API. After some research I found it to be easier than had I expected. Since this was my first, I attempted keep my project simple and clean. I also gave this project a reactive search bar with a preset autofocus so the user never has to do anything but type.</p>
+
+            <p>I attached an event listener, on change, to the user input, search. The value picked up from the search is then queried against Wikipedia's api. The results are returned back using the state, list. A function takes the state, list, and parses it's url, title, and description. Using ReactJS's state allows me to give the web app continuous reactivity. Thus giving the user almost intant feedback.</p>
+
+            <h5>Links:</h5>
+
+            <ul className="center-align info-links">
+              <li><Link className="white-text orange waves-effect waves-light btn" to='/projects/wiki-viewer/live'>Live Preview</Link></li>
+              <li><Link className="white-text orange waves-effect waves-light btn" target="_blank" to="https://www.freecodecamp.com/challenges/build-a-wikipedia-viewer">FreeCodeCamp</Link></li>
+              <li><Link className="white-text orange waves-effect waves-light btn" target="_blank" to="http://codepen.io/Neoplatonist/pen/RRoMey">CodePen Preview</Link></li>
+              <li><Link className="white-text orange waves-effect waves-light btn" target="_blank" to="https://github.com/Neoplatonist/FCC-react-wiki-viewer">Github Project</Link></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="row wiki-pic-1">
+          <div className="wiki-pic-1 container">
+            <div className="col m12 hide-on-large-only">
+              <h6>The UI/UX draws the user to start typing in the search box. Also the cursor is already focused on the search field so all the user has to do is start typing.</h6>
             </div>
-
-            <div className="row specs">
-              <h5>Specs:</h5>
-
-              <p>Will add specs</p>
-
-              <div className="center-align">
-                <Link className="blue-text spec-link" target="_blank" to="https://www.freecodecamp.com/challenges/build-a-wikipedia-viewer">FreeCodeCamp</Link>
-                <Link className="blue-text spec-link" target="_blank" to="http://codepen.io/Neoplatonist/pen/RRoMey">CodePen</Link>
-                <Link className="blue-text spec-link" target="_blank" to="https://github.com/Neoplatonist/FCC-react-wiki-viewer">Github</Link>
-                <Link className="blue-text spec-link" to='/projects/wiki-viewer/live'>Live</Link>
-              </div>
+            <div className="col m12 l7">
+              <img src="/static/images/wiki-viewer-1.png" alt=""/>
+            </div>
+            <div className="col l5 hide-on-med-and-down">
+              <h6>The UI/UX draws the user to start typing in the search box. Also the cursor is already focused on the search field so all the user has to do is start typing.</h6>
             </div>
           </div>
-
         </div>
+
+        <div className="row wiki-pic-2">
+          <div className="wiki-pic-1 container">
+            <div className="col m12 l5">
+              <h6>As the user starts typing the web app automatically starts quering Wikipedia and displaying the search results.</h6>
+            </div>
+            <div className="col m12 l7">
+              <img src="/static/images/wiki-viewer-2.png" alt=""/>
+            </div>
+          </div>
+        </div>
+
+        <div className="row wiki-pic-3">
+          <div className="wiki-pic-1 container">
+            <div className="col m12 l5 hide-on-large-only">
+              <h6>When the user is finished they can scroll through the top 10 results. As they hover over the selection it grows to make their selection more visible.</h6>
+            </div>
+            <div className="col m12 l7">
+              <img src="/static/images/wiki-viewer-3.png" alt=""/>
+            </div>
+            <div className="col m12 l5 hide-on-med-and-down">
+              <h6>When the user is finished they can scroll through the top 10 results. As they hover over the selection it grows to make their selection more visible.</h6>
+            </div>
+          </div>
+        </div>
+
+
+        {/* <ul className="pics">
+          <li><img src="/static/images/wiki-viewer-1.png" alt=""/></li>
+          <li><img src="/static/images/wiki-viewer-2.png" alt=""/></li>
+          <li><img src="/static/images/wiki-viewer-3.png" alt=""/></li>
+        </ul> */}
       </div>
     );
   }
