@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import Nav from '../layouts/nav/index';
+import Footer from '../layouts/footer/index';
 import './styles.scss';
 
 export default class Homepage extends Component {
@@ -13,16 +14,15 @@ export default class Homepage extends Component {
   }
   /*eslint-enable */
 
-
   render() {
     return (
       <div id="body">
         <Helmet
-          title='Home Page'
+          title='Josh F. Johnston | Home Page'
           meta={[
             {
               property: 'og:title',
-              content: 'Josh F. Johnston - Homepage'
+              content: 'Josh F. Johnston | Homepage'
             }
           ]}
         />
@@ -52,6 +52,8 @@ export default class Homepage extends Component {
             </div>
           </div>
         </div>
+
+        <Footer />
       </div>
     );
   }

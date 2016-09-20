@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import Helmet from 'react-helmet';
 import WikiViewerLive from './live/index';
 import Nav from '../../layouts/nav/index';
+import Footer from '../../layouts/footer/index';
 import './styles.scss';
 
 export default class WikiViewer extends Component {
@@ -19,13 +20,13 @@ export default class WikiViewer extends Component {
 
   render() {
     return (
-      <div>
+      <div id="wrapper">
         <Helmet
-          title='Wiki Viewer'
+          title='Josh F. Johnston | Wiki Viewer'
           meta={[
             {
               property: 'og:title',
-              content: 'Wiki Viewer by Josh F. Johnston'
+              content: 'Josh F. Johnston | Wiki Viewer'
             }
           ]}
         />
@@ -125,12 +126,7 @@ export default class WikiViewer extends Component {
           </div>
         </div>
 
-
-        {/* <ul className="pics">
-          <li><img src="/static/images/wiki-viewer-1.png" alt=""/></li>
-          <li><img src="/static/images/wiki-viewer-2.png" alt=""/></li>
-          <li><img src="/static/images/wiki-viewer-3.png" alt=""/></li>
-        </ul> */}
+        <Footer />
       </div>
     );
   }

@@ -70,11 +70,11 @@ export default class WikiViewerLive extends Component {
     return (
       <div>
         <Helmet
-          title='Wiki Viewer Project'
+          title='Josh F. Johnston | Wiki Viewer Live'
           meta={[
             {
               property: 'og:title',
-              content: 'Wikipedia Viewer Project by Josh F. Johnston'
+              content: 'Josh F. Johnston | Wikipedia Viewer Live'
             }
           ]}
           link={[

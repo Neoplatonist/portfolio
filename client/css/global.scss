@@ -9,6 +9,12 @@ body {
   // height: 100vh;
   // background-color: #eceff1;
   background-color: #fafafa;
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
 }
 
 @font-face {

@@ -36,11 +36,11 @@ export default class Projects extends Component {
     return (
       <div>
         <Helmet
-          title='Project List'
+          title='Josh F. Johnston | Project List'
           meta={[
             {
               property: 'og:title',
-              content: 'Project List by Josh F. Johnston'
+              content: 'Josh F. Johnston | Project List'
             }
           ]}
         />
