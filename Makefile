@@ -23,10 +23,10 @@ clean:
 	@rm -rf $(BINDATA)
 
 $(ON):
-	go install $(IMPORT_PATH)/vendor/github.com/olebedev/on
+	go install github.com/olebedev/on
 
 $(GO_BINDATA):
-	go install $(IMPORT_PATH)/vendor/github.com/jteeuwen/go-bindata/...
+	go install github.com/jteeuwen/go-bindata
 
 $(BUNDLE): $(APP)
 	@$(NODE_BIN)/webpack --progress --colors --bail

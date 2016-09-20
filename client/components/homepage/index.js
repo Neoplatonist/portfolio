@@ -18,7 +18,7 @@ export default class Homepage extends Component {
     return (
       <div id="body">
         <Helmet
-          title='Home page'
+          title='Home Page'
           meta={[
             {
               property: 'og:title',

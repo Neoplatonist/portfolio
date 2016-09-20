@@ -36,7 +36,13 @@ export default class Projects extends Component {
     return (
       <div>
         <Helmet
-
+          title='Project List'
+          meta={[
+            {
+              property: 'og:title',
+              content: 'Project List by Josh F. Johnston'
+            }
+          ]}
         />
 
         <Nav />

@@ -20,6 +20,16 @@ export default class WikiViewer extends Component {
   render() {
     return (
       <div>
+        <Helmet
+          title='Wiki Viewer'
+          meta={[
+            {
+              property: 'og:title',
+              content: 'Wiki Viewer by Josh F. Johnston'
+            }
+          ]}
+        />
+
         <Nav />
 
         <div className="project-header container">

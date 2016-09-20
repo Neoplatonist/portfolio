@@ -29,7 +29,7 @@ export default class WikiViewerLive extends Component {
   }
 
   componentWillUnmount() {
-    document.body.style.backgroundColor = '#cfd8dc';
+    document.body.style.backgroundColor = '#fafafa';
   }
 
   // Sends query to Wikipedia through their API
@@ -70,11 +70,11 @@ export default class WikiViewerLive extends Component {
     return (
       <div>
         <Helmet
-          title='Wiki Viewer - Josh F. Johnston'
+          title='Wiki Viewer Project'
           meta={[
             {
               property: 'og:title',
-              content: 'Wikipedia Viewer project by Josh F. Johnston'
+              content: 'Wikipedia Viewer Project by Josh F. Johnston'
             }
           ]}
           link={[

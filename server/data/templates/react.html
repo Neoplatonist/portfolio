@@ -46,15 +46,14 @@
     {{end}}
     <div id="app">{{ .HTMLApp }}</div>
     <script onload="this.parentElement.removeChild(this)">window['--app-initial'] = JSON.parse("{{if .Initial}}{{ .Initial }}{{else}}{}{{end}}");</script>
-    <script>
+    <!-- <script>
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         document.write('<script src="/static/js/jquery-3.1.0.min.js"><\/script>');
-        document.write('<script src="/static/js/materialize.min.js"><\/script>');
-      } else {
-        document.write('<script async src="/static/js/jquery-3.1.0.min.js"><\/script>');
-        document.write('<script async src="/static/js/materialize.min.js"><\/script>');
+        document.write('<script defer src="/static/js/materialize.min.js"><\/script>');
       }
-    </script>
+    </script> -->
+    <script src="/static/js/jquery-3.1.0.min.js"></script>
+    <script defer src="/static/js/materialize.min.js"></script>
     <script async defer src="/static/build/bundle.js" onload="this.parentElement.removeChild(this)"></script>
   </body>
 </html>
