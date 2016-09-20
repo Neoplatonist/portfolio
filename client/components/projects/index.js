@@ -17,19 +17,19 @@ export default class Projects extends Component {
   }
 
   ovly1Enter() {
-    $(".ovly1").removeClass("hide");
+    $('.ovly1').removeClass('hide');
   }
 
   ovly1Leave() {
-    $(".ovly1").addClass("hide");
+    $('.ovly1').addClass('hide');
   }
 
   ovly2Enter() {
-    $(".ovly2").removeClass("hide");
+    $('.ovly2').removeClass('hide');
   }
 
   ovly2Leave() {
-    $(".ovly2").addClass("hide");
+    $('.ovly2').addClass('hide');
   }
 
   render() {
